@@ -1,0 +1,57 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-9');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Henju';
+    src: url('./assets/fonts/Henju-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Henju';
+    src: url('./assets/fonts/Henju-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Henju';
+    src: url('./assets/fonts/Henju-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Henju';
+    src: url('./assets/fonts/Henju-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+:root {
+    --color-primary: #f3a952;
+    --text-color: #212020;
+    --text-white: #fcfaf8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Henju', sans-serif !important;
+    background: #fcfaf8;
+    color: var(--text-color);
+    text-rendering: optimizeSpeed;
+    font-size: 1rem;
+    line-height: 1.375rem;
+}
+
+/*Font henju */
+
+.slick-slider .slick-track {
+    display: flex;
+    align-items: center;
+}
