@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { ChromeToolBar } from '~/assets/images';
 import { landing } from '~/assets/video';
-import { Button } from '../Button';
+import { Button } from '../shared/Button';
 
-const appUrl = 'https://chillhop.onrender.com/';
+const appUrl = 'https://app-chillhop.onrender.com';
 const words = ['focus', 'work', 'study', 'relax'];
 function Hero() {
     const [index, setIndex] = useState(0);

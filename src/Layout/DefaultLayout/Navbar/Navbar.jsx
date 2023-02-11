@@ -1,9 +1,9 @@
-import { Button } from '~/components/Button';
+import { Button } from '~/components/shared/Button';
 import { MenuIcon } from '~/assets/icons';
 import { logoGif } from '~/assets/images';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-const appUrl = 'https://chillhop.onrender.com/';
+const appUrl = 'https://app-chillhop.onrender.com';
 
 function Navbar() {
     const [nav, setNav] = useState(false);
@@ -25,30 +25,31 @@ function Navbar() {
                     <MenuIcon className="md:hidden" />
                 </div>
                 {nav && (
+                    // mobile screen
                     <div className="md:hidden absolute bg-[#212020] p-4 right-0  min-w-[180px] rounded-2xl">
                         <ul className="flex flex-col text-xl font-Helvetica w-full">
                             <li className="mb-2">
-                                <Button type="unstyle-link" to="/contact">
+                                <Button type="unstyle-link" to="/home">
                                     Contact
                                 </Button>
                             </li>
                             <li className="mb-2">
-                                <Button type="unstyle-link" to="/updates">
+                                <Button type="unstyle-link" to="/home">
                                     Updates
                                 </Button>
                             </li>
                             <li className="mb-2">
-                                <Button type="unstyle-link" to="/music">
+                                <Button type="unstyle-link" to="/home">
                                     Music
                                 </Button>
                             </li>
                             <li className="mb-2">
-                                <Button type="unstyle-link" to="/faq">
+                                <Button type="unstyle-link" to="/home">
                                     FAQ
                                 </Button>
                             </li>
                             <li className="mb-2">
-                                <Button type="unstyle-link" to="pricing">
+                                <Button type="unstyle-link" to="/home">
                                     Pricing
                                 </Button>
                             </li>
@@ -60,29 +61,30 @@ function Navbar() {
                         </ul>
                     </div>
                 )}
+                {/* tablet screen */}
                 <ul className="hidden md:flex flex-row items-center text-base font-Helvetica font-bold gap-5">
                     <li>
-                        <Button type="unstyle-link" className="text-[#212020] font-bold text-base" to="/contact">
+                        <Button type="unstyle-link" className="text-[#212020] font-bold text-base" to="/home">
                             Contact
                         </Button>
                     </li>
                     <li>
-                        <Button type="unstyle-link" className="text-[#212020] font-bold text-base" to="/updates">
+                        <Button type="unstyle-link" className="text-[#212020] font-bold text-base" to="/home">
                             Updates
                         </Button>
                     </li>
                     <li>
-                        <Button type="unstyle-link" className="text-[#212020] font-bold text-base" to="/music">
+                        <Button type="unstyle-link" className="text-[#212020] font-bold text-base" to="/home">
                             Music
                         </Button>
                     </li>
                     <li>
-                        <Button type="unstyle-link" className="text-[#212020] font-bold text-base" to="/faq">
+                        <Button type="unstyle-link" className="text-[#212020] font-bold text-base" to="/home">
                             FAQ
                         </Button>
                     </li>
                     <li>
-                        <Button type="unstyle-link" className="text-[#212020] font-bold text-base" to="/pricing">
+                        <Button type="unstyle-link" className="text-[#212020] font-bold text-base" to="/home">
                             Pricing
                         </Button>
                     </li>

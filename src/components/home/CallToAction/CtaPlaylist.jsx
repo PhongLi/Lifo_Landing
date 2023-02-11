@@ -1,6 +1,6 @@
 import { ChillIcon, JazzyIcon, SleepyIcon } from '~/assets/icons';
-import { HeroImg, PlayerImg } from '~/assets/images';
-import { Button } from '~/components/Button';
+import { PlayerImg } from '~/assets/images';
+import { Button } from '~/components/shared/Button';
 
 function CtaPlaylist() {
     return (
@@ -12,15 +12,12 @@ function CtaPlaylist() {
                 <p className="text-lg leading-5 font-Helvetica font-semibold mb-6">
                     Hit play and get into the zone instantly. No ads. No distracting lyrics.
                 </p>
-                <Button type="rounded" className="font-bold">
+                <Button type="rounded" className="font-bold" href="https://app-chillhop.onrender.com">
                     Get Started
                 </Button>
             </div>
-            <div className="w-full px-2">
-                <div
-                    alt="hero"
-                    className="relative flex justify-center items-end aspect-[6/5] bg-hero-playlist bg-cover rounded-3xl"
-                >
+            <div className="px-2">
+                <div className="relative flex justify-center items-end aspect-[6/5] bg-hero-playlist bg-cover rounded-3xl">
                     <img src={PlayerImg} alt="player" className="w-1/2 h-3/4" />
                     <div className="absolute top-[37%] w-1/2 grid grid-cols-3 px-1">
                         <SleepyIcon className="p-2" />

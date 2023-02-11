@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-function GifVideo({ video }) {
+function GifVideo({ video, className }) {
     const ref = useRef();
     const [inView, setInView] = useState();
     useEffect(() => {
@@ -19,7 +19,7 @@ function GifVideo({ video }) {
         observer.observe(ref.current);
     }, []);
     return (
-        <video width="100%" ref={ref} muted autoPlay playsInline loop className="w-full h-auto rounded-2xl p-2">
+        <video width="100%" ref={ref} muted autoPlay playsInline loop className={className}>
             <source src={video} type="video/mp4" />
         </video>
     );

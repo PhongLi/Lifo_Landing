@@ -7,6 +7,10 @@ module.exports = {
             },
             colors: {
                 primary: 'var(--color-primary)',
+                secondary: 'var(--color-secondary)',
+                'text-color': 'var(--text-color)',
+                'text-white': 'var(--text-white)',
+                'bg-dark': 'var(--bg-dark)',
             },
             boxShadow: {
                 s1: 'rgb(0 0 0 / 50%) 0px 16px 48px;',
@@ -14,6 +18,11 @@ module.exports = {
             },
             backgroundImage: {
                 'hero-playlist': "url('./assets/images/hero-image.png')",
+                'gradient-timer': 'var(--gradient-timer)',
+                'gradient-insights': 'var(--gradient-insights)',
+                'gradient-playlist': 'var(--gradient-playlist)',
+                'gradient-notes': 'var(--gradient-notes)',
+                'gradient-sounds': 'var(--gradient-sounds)',
             },
         },
     },

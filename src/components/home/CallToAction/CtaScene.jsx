@@ -2,9 +2,24 @@ import { useState } from 'react';
 import Switch from 'react-switch';
 import { MoonIcon, SunIcon } from '~/assets/icons';
 import { SceneGif } from '~/assets/images';
-import { exteriorday, kyotoparkday, kyotostreetday, lofiday, lofiexteriorday, lvrday } from '~/assets/video';
-import { Button } from '~/components/Button';
+import {
+    exteriorday,
+    exteriornight,
+    kyotoparkday,
+    kyotoparknight,
+    kyotostreetday,
+    kyotostreetnight,
+    lofiday,
+    lofiexteriorday,
+    lofiexteriornight,
+    lofinight,
+    lvrday,
+    lvrnight,
+} from '~/assets/video';
+import { Button } from '~/components/shared/Button';
 import GifVideo from '~/components/shared/GifVideo';
+
+const appUrl = 'https://app-chillhop.onrender.com';
 
 function CtaScene() {
     const [isDay, setDay] = useState(true);
@@ -13,7 +28,7 @@ function CtaScene() {
     };
 
     return (
-        <section className="mt-20 -mx-4">
+        <section className="my-20 -mx-4">
             <div className="flex flex-col justify-center items-center text-center max-w-[30rem] mx-auto mb-10">
                 <h3 className="text-[1.75rem] md:text-[2rem] leading-8 font-bold mb-4">
                     Craft your focus <br /> environment
@@ -22,7 +37,7 @@ function CtaScene() {
                     Would you rather get it done in the cafe, or escape to the beach? lofi.co gives you both and a lot
                     more.
                 </p>
-                <Button type="rounded" className="font-bold">
+                <Button type="rounded" className="font-bold" href={appUrl}>
                     Get Started
                 </Button>
             </div>
@@ -30,7 +45,7 @@ function CtaScene() {
                 <div className="flex flex-row justify-center items-center">
                     <SunIcon />
                     <Switch
-                        checked={isDay}
+                        checked={!isDay}
                         onChange={handleSwitch}
                         handleDiameter={27}
                         offColor="#edeae7"
@@ -49,18 +64,48 @@ function CtaScene() {
                 <p className="text-[#9E9999] mt-2">Click me!</p>
             </div>
             <div>
-                <div className="flex justify-center">
+                <div className="flex justify-center mt-8">
                     <div className="grid grid-cols-3 w-[120vw]">
-                        {isDay ? <GifVideo video={kyotoparkday}></GifVideo> : <GifVideo></GifVideo>}
-                        <GifVideo video={exteriorday}></GifVideo>
-                        <GifVideo video={lvrday}></GifVideo>
+                        <div className={`${isDay ? 'block' : 'hidden'}`}>
+                            <GifVideo video={kyotoparkday} className="w-full h-auto rounded-2xl p-2"></GifVideo>
+                        </div>
+                        <div className={`${!isDay ? 'block' : 'hidden'}`}>
+                            <GifVideo video={kyotoparknight} className="w-full h-auto rounded-2xl p-2"></GifVideo>
+                        </div>
+                        <div className={`${isDay ? 'block' : 'hidden'}`}>
+                            <GifVideo video={exteriorday} className="w-full h-auto rounded-2xl p-2"></GifVideo>
+                        </div>
+                        <div className={`${!isDay ? 'block' : 'hidden'}`}>
+                            <GifVideo video={exteriornight} className="w-full h-auto rounded-2xl p-2"></GifVideo>
+                        </div>
+                        <div className={`${isDay ? 'block' : 'hidden'}`}>
+                            <GifVideo video={lvrday} className="w-full h-auto rounded-2xl p-2"></GifVideo>
+                        </div>
+                        <div className={`${!isDay ? 'block' : 'hidden'}`}>
+                            <GifVideo video={lvrnight} className="w-full h-auto rounded-2xl p-2"></GifVideo>
+                        </div>
                     </div>
                 </div>
                 <div className="flex justify-center">
                     <div className="grid grid-cols-4 w-[170vw]">
-                        <GifVideo video={lofiexteriorday}></GifVideo>
-                        <GifVideo video={kyotostreetday}></GifVideo>
-                        <GifVideo video={lofiday}></GifVideo>
+                        <div className={`${isDay ? 'block' : 'hidden'}`}>
+                            <GifVideo video={lofiexteriorday} className="w-full h-auto rounded-2xl p-2"></GifVideo>
+                        </div>
+                        <div className={`${!isDay ? 'block' : 'hidden'}`}>
+                            <GifVideo video={lofiexteriornight} className="w-full h-auto rounded-2xl p-2"></GifVideo>
+                        </div>
+                        <div className={`${isDay ? 'block' : 'hidden'}`}>
+                            <GifVideo video={kyotostreetday} className="w-full h-auto rounded-2xl p-2"></GifVideo>
+                        </div>
+                        <div className={`${!isDay ? 'block' : 'hidden'}`}>
+                            <GifVideo video={kyotostreetnight} className="w-full h-auto rounded-2xl p-2"></GifVideo>
+                        </div>
+                        <div className={`${isDay ? 'block' : 'hidden'}`}>
+                            <GifVideo video={lofiday} className="w-full h-auto rounded-2xl p-2"></GifVideo>
+                        </div>
+                        <div className={`${!isDay ? 'block' : 'hidden'}`}>
+                            <GifVideo video={lofinight} className="w-full h-auto rounded-2xl p-2"></GifVideo>
+                        </div>
                         <img src={SceneGif} alt="scene" className="w-full h-auto rounded-2xl p-2" />
                     </div>
                 </div>

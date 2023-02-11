@@ -11,6 +11,8 @@ import kyotostreetday from './kyotostreet-day.mp4';
 import kyotostreetnight from './kyotostreet-night.mp4';
 import lofiday from './lofi-day.mp4';
 import lofinight from './lofi-night.mp4';
+import norain from './no-rain.mp4';
+import rain from './rain.mp4';
 
 export {
     landing,
@@ -26,4 +28,6 @@ export {
     lofiexteriornight,
     kyotostreetnight,
     lofinight,
+    norain,
+    rain,
 };
