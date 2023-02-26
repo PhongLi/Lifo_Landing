@@ -102,3 +102,12 @@ export const Instagram = ({ width = '24', height = '24', className }) => (
         ></path>
     </svg>
 );
+
+export const CheckIcon = ({ width = '60', height = '68', className }) => (
+    <svg width={width} height={height} fill="none" className={`${className}`} viewBox="0 0 69 78">
+        <path
+            fill="#E18660"
+            d="M.375 68.25h68.25V78H.375v-9.75zM22.8 55.087L.375 32.662l9.75-9.262L22.8 36.075 58.875 0l9.75 9.75L22.8 55.087z"
+        ></path>
+    </svg>
+);

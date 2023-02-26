@@ -29,7 +29,7 @@ function Navbar() {
                     <div className="md:hidden absolute bg-[#212020] p-4 right-0  min-w-[180px] rounded-2xl">
                         <ul className="flex flex-col text-xl font-Helvetica w-full">
                             <li className="mb-2">
-                                <Button type="unstyle-link" to="/home">
+                                <Button type="unstyle-link" to="/contact">
                                     Contact
                                 </Button>
                             </li>
@@ -64,7 +64,7 @@ function Navbar() {
                 {/* tablet screen */}
                 <ul className="hidden md:flex flex-row items-center text-base font-Helvetica font-bold gap-5">
                     <li>
-                        <Button type="unstyle-link" className="text-[#212020] font-bold text-base" to="/home">
+                        <Button type="unstyle-link" className="text-[#212020] font-bold text-base" to="/contact">
                             Contact
                         </Button>
                     </li>
